@@ -40,9 +40,7 @@ export default function Home() {
      <CardWithbutton />
      <ColWithLogo />
      <TabWithImg />
-     <FooterCta />
      <CardGrid />
-     <Footer />
      <Product  {...productData}/>
      <UseCases {...UseCasesData}/>
      <StickyNav />
@@ -50,6 +48,8 @@ export default function Home() {
      <CardColumnFirst />
      <CardColumnSecond />
      <CardColumnThird />
+     <FooterCta />
+     <Footer />
    </>
   );
 }
