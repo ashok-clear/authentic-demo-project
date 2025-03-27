@@ -54,7 +54,463 @@ interface TestDocumentData {
 export type TestDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<TestDocumentData>, "Test", Lang>;
 
-export type AllDocumentTypes = TestDocument;
+type CardwithbuttonDocumentDataSlicesSlice = never;
+
+/**
+ * Content for CardWithButton documents
+ */
+interface CardwithbuttonDocumentData {
+  /**
+   * title field in *CardWithButton*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cardwithbutton.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * subhead field in *CardWithButton*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cardwithbutton.subhead
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subhead: prismic.KeyTextField;
+
+  /**
+   * subtitle field in *CardWithButton*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cardwithbutton.subtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * button field in *CardWithButton*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cardwithbutton.button
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * secondsubhead field in *CardWithButton*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cardwithbutton.secondsubhead
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  secondsubhead: prismic.KeyTextField;
+
+  /**
+   * secondsubtitle field in *CardWithButton*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cardwithbutton.secondsubtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  secondsubtitle: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *CardWithButton*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cardwithbutton.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<CardwithbuttonDocumentDataSlicesSlice> /**
+   * Meta Title field in *CardWithButton*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: cardwithbutton.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *CardWithButton*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: cardwithbutton.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *CardWithButton*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cardwithbutton.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * CardWithButton document from Prismic
+ *
+ * - **API ID**: `cardwithbutton`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CardwithbuttonDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<CardwithbuttonDocumentData>,
+    "cardwithbutton",
+    Lang
+  >;
+
+type ColwithlogosDocumentDataSlicesSlice = never;
+
+/**
+ * Content for ColWithLogos documents
+ */
+interface ColwithlogosDocumentData {
+  /**
+   * title field in *ColWithLogos*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: colwithlogos.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * fedrampwithtextllogo field in *ColWithLogos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: colwithlogos.fedrampwithtext
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  fedrampwithtext: prismic.ImageField<never>;
+
+  /**
+   * aicpalogo field in *ColWithLogos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: colwithlogos.aicpalogo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  aicpalogo: prismic.ImageField<never>;
+
+  /**
+   * pcilogo field in *ColWithLogos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: colwithlogos.pcilogo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  pcilogo: prismic.ImageField<never>;
+
+  /**
+   * hipaacompliant field in *ColWithLogos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: colwithlogos.hipaacompliant
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hipaacompliant: prismic.ImageField<never>;
+
+  /**
+   * button field in *ColWithLogos*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: colwithlogos.button
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * Slice Zone field in *ColWithLogos*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: colwithlogos.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<ColwithlogosDocumentDataSlicesSlice> /**
+   * Meta Title field in *ColWithLogos*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: colwithlogos.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *ColWithLogos*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: colwithlogos.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *ColWithLogos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: colwithlogos.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * ColWithLogos document from Prismic
+ *
+ * - **API ID**: `colwithlogos`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ColwithlogosDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<ColwithlogosDocumentData>,
+    "colwithlogos",
+    Lang
+  >;
+
+type HerobannerDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Herobanner documents
+ */
+interface HerobannerDocumentData {
+  /**
+   * herobannervideo field in *Herobanner*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: herobanner.herobannervideo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  herobannervideo: prismic.LinkToMediaField<prismic.FieldState, never>;
+
+  /**
+   * title field in *Herobanner*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: herobanner.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * subtitle field in *Herobanner*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: herobanner.subtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * buttton field in *Herobanner*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: herobanner.buttton
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  buttton: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Slice Zone field in *Herobanner*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: herobanner.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<HerobannerDocumentDataSlicesSlice> /**
+   * Meta Title field in *Herobanner*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: herobanner.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Herobanner*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: herobanner.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Herobanner*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: herobanner.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Herobanner document from Prismic
+ *
+ * - **API ID**: `herobanner`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HerobannerDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<HerobannerDocumentData>,
+    "herobanner",
+    Lang
+  >;
+
+export type AllDocumentTypes =
+  | TestDocument
+  | CardwithbuttonDocument
+  | ColwithlogosDocument
+  | HerobannerDocument;
+
+/**
+ * Primary content in *HeroBanner → Default → Primary*
+ */
+export interface HeroBannerSliceDefaultPrimary {
+  /**
+   * herobannervideo field in *HeroBanner → Default → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_banner.default.primary.herobannervideo
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  herobannervideo: prismic.LinkToMediaField<prismic.FieldState, never>;
+
+  /**
+   * title field in *HeroBanner → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_banner.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * subtitle field in *HeroBanner → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_banner.default.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * button field in *HeroBanner → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_banner.default.primary.button
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Default variation for HeroBanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroBannerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeroBannerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *HeroBanner*
+ */
+type HeroBannerSliceVariation = HeroBannerSliceDefault;
+
+/**
+ * HeroBanner Shared Slice
+ *
+ * - **API ID**: `hero_banner`
+ * - **Description**: HeroBanner
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroBannerSlice = prismic.SharedSlice<
+  "hero_banner",
+  HeroBannerSliceVariation
+>;
 
 /**
  * Primary content in *Home → Default → Primary*
@@ -131,7 +587,20 @@ declare module "@prismicio/client" {
     export type {
       TestDocument,
       TestDocumentData,
+      CardwithbuttonDocument,
+      CardwithbuttonDocumentData,
+      CardwithbuttonDocumentDataSlicesSlice,
+      ColwithlogosDocument,
+      ColwithlogosDocumentData,
+      ColwithlogosDocumentDataSlicesSlice,
+      HerobannerDocument,
+      HerobannerDocumentData,
+      HerobannerDocumentDataSlicesSlice,
       AllDocumentTypes,
+      HeroBannerSlice,
+      HeroBannerSliceDefaultPrimary,
+      HeroBannerSliceVariation,
+      HeroBannerSliceDefault,
       HomeSlice,
       HomeSliceDefaultPrimary,
       HomeSliceVariation,

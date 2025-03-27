@@ -1,7 +1,4 @@
-"use client"
 import React from 'react'
-import * as prismic from '@prismicio/client';
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 
@@ -11,10 +8,7 @@ const productData = {
 }
 
 const Product = ({ title, subtitle = [], version = "v-1" }) => {
-    const client = prismic.createClient('https://authentic8.cdn.prismic.io/api/v2');
-
-
-
+    
     return (
         <section className='w-full relative overflow-hidden max-w-[1920px] bg-white mx-auto min-h-[400px] xl:min-h-[632px] lg:min-h-[480px] py-[45px] lg:py-[100px] flex flex-col justify-center'>
             <div className="absolute w-full h-full inset-0 block">

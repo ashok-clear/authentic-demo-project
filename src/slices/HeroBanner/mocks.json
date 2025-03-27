@@ -1,0 +1,41 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"herobannervideo": {
+				"key": "26c3e191-9bbf-47d5-a5ac-b164a212c0ac",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "FileLink",
+					"id": "mock_Media_link",
+					"kind": "file",
+					"name": "mock_name",
+					"url": "https://source.unsplash.com/daily",
+					"size": "0",
+					"text": "wife"
+				}
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "completely",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "generally",
+				"type": "Text"
+			},
+			"button": {
+				"__TYPE__": "LinkContent",
+				"key": "2d3e3f8a-80f1-4cfb-aa90-a44f30e4d8c4",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "feed"
+				}
+			}
+		},
+		"items": []
+	}
+]

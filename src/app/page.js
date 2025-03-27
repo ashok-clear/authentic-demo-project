@@ -1,12 +1,10 @@
-import HeroBanner from "./components/sections/HeroBanner";
-import CardWithbutton from "@/app/components/sections/CardWithButton"
+import HeroBanner from "./components/sections/HeroBanner"
+import CardWithButton from "@/app/components/sections/CardWithButton"
 import ColWithLogo from '@/app/components/sections/ColWithLogo'
 import TabWithImg from "@/app//components/sections/TabWithImg"
 import FooterCta from '@/app/components/sections/FooterCta'
 import CardGrid from '@/app/components/sections/CardGrid'
 import Footer from "@/app/components/sections/Footer"
-import Product from "@/app/components/sections/Product"
-import UseCases from "@/app/components/sections/UseCases"
 import StickyNav from "@/app/components/sections/StickyNav"
 import IntroWithImage from "@/app/components/sections/IntroWithImage"
 import CardColumnFirst from "@/app/components/sections/CardColumnFirst"
@@ -33,23 +31,21 @@ const UseCasesData = {
 }
 
 export default function Home() {
-  
+
   return (
-   <>
-    <HeroBanner {...bannerData} />
-     <CardWithbutton />
-     <ColWithLogo />
-     <TabWithImg />
-     <CardGrid />
-     <Product  {...productData}/>
-     <UseCases {...UseCasesData}/>
-     <StickyNav />
-     <IntroWithImage />
-     <CardColumnFirst />
-     <CardColumnSecond />
-     <CardColumnThird />
-     <FooterCta />
-     <Footer />
-   </>
+    <>
+      <HeroBanner {...bannerData} />
+      <CardWithButton />
+      <ColWithLogo />
+      <TabWithImg />
+      <CardGrid />
+      <StickyNav />
+      <IntroWithImage />
+      <CardColumnFirst />
+      <CardColumnSecond />
+      <CardColumnThird />
+      <FooterCta />
+      <Footer />
+    </>
   );
 }
