@@ -7,12 +7,9 @@ import CardGrid from '@/app/components/sections/CardGrid'
 import Footer from "@/app/components/sections/Footer"
 import StickyNav from "@/app/components/sections/StickyNav"
 import IntroWithImage from "@/app/components/sections/IntroWithImage"
-import CardColumnFirst from "@/app/components/sections/CardColumnFirst"
-import CardColumnSecond from "@/app/components/sections/CardColumnSecond"
-import CardColumnThird from "@/app/components/sections/CardColumnThird"
-
-
-
+import CardColumnFirst from "@/app/components/sections/CardColumn"
+import CardColumnSecond from "@/app/components/sections/ColThreeWithCards"
+import CardColumnThird from "@/app/components/sections/ColThreeCardWrapper"
 
 const bannerData = {
   title: "Digital investigations without the risk",

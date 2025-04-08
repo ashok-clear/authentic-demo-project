@@ -27,22 +27,54 @@ const ColWithLogo = () => {
                 <div className='flex justify-center items-center  flex-wrap mt-[30px]'>
                     <div className="basis-full sm:basis-6/12 md:basis-3/12  mx-auto mt-[10px] relative">
                         <div className='mx-auto max-w-[150px] h-[100px] lg:max-w-[281px] lg:h-[130px] w-full mx-auto'>
-                            <Image src={document?.fedrampwithtext.url}  alt="man-image"  width={158}  height={23} className='w-full max-w-full align-top border-0 h-full object-contain' />
+                            {document?.fedrampwithtext?.url ? (
+                                <Image
+                                    src={document.fedrampwithtext.url}
+                                    alt="Header Logo"
+                                    width={158}
+                                    height={23}
+                                    className='w-full max-w-full align-top border-0 h-full object-contain'
+                                />
+                            ) : null}
                         </div>
                     </div>
                     <div className="basis-full sm:basis-6/12 md:basis-3/12  mx-auto mt-[10px] relative">
                         <div className='mx-auto max-w-[150px] h-[100px] lg:max-w-[281px] lg:h-[130px] w-full mx-auto'>
-                        <Image src={document?.aicpalogo.url} alt="man-image" width={281} height={130} className='w-full max-w-full  h-full object-contain'/>
+                            {document?.aicpalogo?.url ? (
+                                <Image
+                                    src={document.aicpalogo.url}
+                                    alt="Header Logo"
+                                    width={158}
+                                    height={23}
+                                    className='w-full max-w-full align-top border-0 h-full object-contain'
+                                />
+                            ) : null}
                         </div>
                     </div>
                     <div className="basis-full sm:basis-6/12 md:basis-3/12  mx-auto mt-[10px] relative">
                         <div className='mx-auto max-w-[150px] h-[100px] lg:max-w-[281px] lg:h-[130px] w-full mx-auto'>
-                        <Image src={document?.pcilogo.url}  alt="man-image"  width={158}  height={23} className='w-full max-w-full align-top border-0 h-full object-contain' />
+                            {document?.pcilogo?.url ? (
+                                <Image
+                                    src={document.pcilogo.url}
+                                    alt="Header Logo"
+                                    width={158}
+                                    height={23}
+                                    className='w-full max-w-full align-top border-0 h-full object-contain'
+                                />
+                            ) : null}
                         </div>
                     </div>
                     <div className="basis-full sm:basis-6/12 md:basis-3/12  mx-auto mt-[10px] relative">
                         <div className='mx-auto max-w-[150px] h-[100px] lg:max-w-[281px] lg:h-[130px] w-full mx-auto'>
-                        <Image src={document?.hipaacompliant.url} alt="man-image" width={158} height={23} className='w-full max-w-full h-full object-contain'/>
+                            {document?.hipaacompliant?.url ? (
+                                <Image
+                                    src={document.hipaacompliant.url}
+                                    alt="Header Logo"
+                                    width={158}
+                                    height={23}
+                                    className='w-full max-w-full align-top border-0 h-full object-contain'
+                                />
+                            ) : null}
                         </div>
                     </div>
                 </div>
