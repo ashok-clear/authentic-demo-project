@@ -1,14 +1,34 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { client } from '../../../..'
+
+
 const Footer = () => {
+    const [document, setDocument] = useState()
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const doc = await client.getByUID("footer", String(12));
+                console.log(doc)
+                setDocument(doc.data);
+            } catch (err) {
+                console.error("Failed to fetch Prismic data:", err);
+            }
+        };
+        fetchData()
+    }, []);
     return (
-        <footer className='bg-[#151831] max-w-[1920px] mx-auto w-full relative'>
+        <footer className='Footer bg-[#151831] max-w-[1920px] mx-auto w-full relative'>
             <div className="container">
                 <div className='pt-8 pb-10 lg:pt-[80px] pr-0 lg:pb-12 pl-0 flex items-start flex-wrap'>
                     <div className='basis-full lg:basis-2/12 flex justify-between md:justify-center flex-row md:flex-col w-1/2 float-left relative'>
                         <div className='mt-[30px]'>
                             <div className="w-[160px] h-[19px]">
-                                <a href="" className='cursor-pointer no-underline outline-0 inline-block font-proxima'>
+                                <Link href="" className='cursor-pointer no-underline outline-0 inline-block font-proxima'>
                                     <Image
                                         src="/logos/authentic8-white-logo.svg"
                                         alt="man-image"
@@ -16,7 +36,7 @@ const Footer = () => {
                                         height={23}
                                         className='w-full max-w-full align-top border-0 h-full object-contain'
                                     />
-                                </a>
+                                </Link>
                             </div>
                             <div className="">
                                 <p className='font-proxima text-[18px] font-normal leading-[1.39] tracking-normal text-[#424b68] mt-[22px]'>
@@ -49,132 +69,41 @@ const Footer = () => {
                         </div>
 
                     </div>
-                    <div className="basis-full  lg:basis-10/12 flex flex-wrap justify-bteween">
-                        <div className="mr-5 mt-[30px]  lg:pl-[39px]">
-                            <ul>
-                                <li>
-                                    <span className='text-[#5ac8fa] block text-[14px] font-bold mb-[10px] max-w-[200px] mt-0 tracking-[0.84px] text-left pt-[5px] pr-0 uppercase'>PRODUCTS</span>
-                                </li>
-                                <li>
-                                    <a href="/products/silo-for-research" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Silo for Research</a>
-                                </li>
-                                <li>
-                                    <a href="/products/zero-trust-application-access" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Zero Trust Application Access</a>
-                                </li>
-                                <li>
-                                    <a href="/products/risky-web-link-isolation" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Risky Web Link Isolation</a>
-                                </li>
-                                <li>
-                                    <a href="/products/secure-browsing" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Secure Browsing</a>
-                                </li>
-                                <li>
-                                    <a href="/products/silo-web-isolation-platform" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Silo Platform</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="mr-5 mt-[30px]  lg:pl-[39px]">
-                            <ul>
-                                <li>
-                                    <span className='text-[#5ac8fa] block text-[14px] font-bold mb-[10px] max-w-[200px] mt-0 tracking-[0.84px] text-left pt-[5px] pr-0 uppercase'>USE CASES</span>
-                                </li>
-                                <li>
-                                    <a href="/use-cases/#digitalinvestigations" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Digital investigations</a>
-                                </li>
-                                <li>
-                                    <a href="/use-cases/#sase" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>SASE</a>
-                                </li>
-                                <li>
-                                    <a href="/use-cases/#secureweb" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Secure web access</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="mr-5 mt-[30px]  lg:pl-[39px]">
-                            <ul>
-                                <li>
-                                    <span className='text-[#5ac8fa] block text-[14px] font-bold mb-[10px] max-w-[200px] mt-0 tracking-[0.84px] text-left pt-[5px] pr-0 uppercase'>COMPANY</span>
-                                </li>
-                                <li>
-                                    <a href="/company/about-us" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>About us</a>
-                                </li>
-                                <li>
-                                    <a href="/company/leadership-team" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Leadership </a>
-                                </li>
-                                <li>
-                                    <a href="/partners" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Partners</a>
-                                </li>
-                                <li>
-                                    <a href="/news-press" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>News and press</a>
-                                </li>
-                                <li>
-                                    <a href="/about/careers" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Careers</a>
-                                </li>
-                                <li>
-                                    <a href="/certifications" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Certifications</a>
-                                </li>
-                                <li>
-                                    <a href="/contact-us" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Contact us</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="mr-5 mt-[30px]  lg:pl-[39px]">
-
-                            <ul>
-                                <li>
-                                    <span className='text-[#5ac8fa] block text-[14px] font-bold mb-[10px] max-w-[200px] mt-0 tracking-[0.84px] text-left pt-[5px] pr-0 uppercase'>Resources</span>
-                                </li>
-                                <li>
-                                    <a href="/resources" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Resource library</a>
-                                </li>
-                                <li>
-                                    <a href="/needlestack" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Podcast</a>
-                                </li>
-                                <li>
-                                    <a href="/blog" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Blog</a>
-                                </li>
-                                <li>
-                                    <a href="/success-stories" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Success stories</a>
-                                </li>
-                                <li>
-                                    <a href="/glossary" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Glossary</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="mr-5 mt-[30px]  lg:pl-[39px]">
-                            <ul>
-                                <li>
-                                    <span className='text-[#5ac8fa] block text-[14px] font-bold mb-[10px] max-w-[200px] mt-0 tracking-[0.84px] text-left pt-[5px] pr-0 uppercase'>GET STARTED</span>
-                                </li>
-                                <li>
-                                    <a href="/demo-request" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case' >Book a demo</a>
-                                </li>
-                                <li>
-                                    <a href="/sfr-free-trial" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case' >Free trial </a>
-                                </li>
-                                <li>
-                                    <a href="/sfr-product-video-tour" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case' >Demo on demand</a>
-                                </li>
-                                <li>
-                                    <a href="/products/silo-for-research/pricing" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case' >Pricing</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="mr-5 mt-[30px]  lg:pl-[39px]">
-                            <ul>
-                                <li>
-                                    <span className='text-[#5ac8fa] block text-[14px] font-bold mb-[10px] max-w-[200px] mt-0 tracking-[0.84px] text-left pt-[5px] pr-0 uppercase'>Support</span>
-                                </li>
-                                <li>
-                                    <a href="/support" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>Support</a>
-                                </li>
-                                <li>
-                                    <a href="https://status.authentic8.com/" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>System status</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
+                    {document?.footer_links?.map((footer_links, index) => {
+                        return (
+                            <div key={index} className="basis-full  lg:basis-2/12 flex flex-wrap justify-bteween">
+                                <div className="mr-5 mt-[30px]  lg:pl-[39px]">
+                                    <ul>
+                                        <li>
+                                            <span className='text-[#5ac8fa] block text-[14px] font-bold mb-[10px] max-w-[200px] mt-0 tracking-[0.84px] text-left pt-[5px] pr-0 uppercase'>{footer_links.title}</span>
+                                        </li>
+                                        <li>
+                                            <Link href="/products/silo-for-research" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>{footer_links.link_first.text}</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/products/zero-trust-application-access" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>{footer_links.link_second.text}</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/products/risky-web-link-isolation" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>{footer_links.link_third.text}</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/products/secure-browsing" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>{footer_links.link_fourth.text}</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/products/silo-web-isolation-platform" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>{footer_links.link_fiveth.text}</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/products/silo-web-isolation-platform" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>{footer_links.link_six.text}</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/products/silo-web-isolation-platform" className='text-[14px] font-normal tracking-normal text-left inline-block max-w-[200px] mt-[10px] text-white cursor-pointer pr-[15px] normal-case'>{footer_links.link_fiveth.seven}</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
-
             </div>
             <div className="relative w-full bottom-0 py-[21px] px-0 border-t border-white">
                 <div className="container">
@@ -182,22 +111,22 @@ const Footer = () => {
                         <div className="basis-6/12 ">
                             <ul className='flex justify-start flex-wrap'>
                                 <li>
-                                    <a href="/privacy-policy"  className='mx-[8px] relative text-[12px] leading-[1.67] font-normal tracking-normal text-white no-underline outline-none cursor-pointer inline-block font-[Proxima-Nova] after:absolute after:top-[56%] after:transform after:translate-y-[-50%] after:right-[-9px] after:m-auto after:w-[1px] after:h-[38%] after:bg-white after:cursor-auto'>Privacy policy</a>
+                                    <Link href="/privacy-policy" className='mx-[8px] relative text-[12px] leading-[1.67] font-normal tracking-normal text-white no-underline outline-none cursor-pointer inline-block font-[Proxima-Nova] after:absolute after:top-[56%] after:transform after:translate-y-[-50%] after:right-[-9px] after:m-auto after:w-[1px] after:h-[38%] after:bg-white after:cursor-auto'>Privacy policy</Link>
                                 </li>
                                 <li>
-                                    <a href="/gdpr-imprint" className='mx-[8px] relative text-[12px] leading-[1.67] font-normal tracking-normal text-white no-underline outline-none cursor-pointer inline-block font-[Proxima-Nova] after:absolute after:top-[56%] after:transform after:translate-y-[-50%] after:right-[-9px] after:m-auto after:w-[1px] after:h-[38%] after:bg-white after:cursor-auto'>GDPR imprint</a>
+                                    <Link href="/gdpr-imprint" className='mx-[8px] relative text-[12px] leading-[1.67] font-normal tracking-normal text-white no-underline outline-none cursor-pointer inline-block font-[Proxima-Nova] after:absolute after:top-[56%] after:transform after:translate-y-[-50%] after:right-[-9px] after:m-auto after:w-[1px] after:h-[38%] after:bg-white after:cursor-auto'>GDPR imprint</Link>
                                 </li>
                                 <li>
-                                    <a href="/terms-of-service" className='mx-[8px] relative text-[12px] leading-[1.67] font-normal tracking-normal text-white no-underline outline-none cursor-pointer inline-block font-[Proxima-Nova] after:absolute after:top-[56%] after:transform after:translate-y-[-50%] after:right-[-9px] after:m-auto after:w-[1px] after:h-[38%] after:bg-white after:cursor-auto'>Terms of service</a>
+                                    <Link href="/terms-of-service" className='mx-[8px] relative text-[12px] leading-[1.67] font-normal tracking-normal text-white no-underline outline-none cursor-pointer inline-block font-[Proxima-Nova] after:absolute after:top-[56%] after:transform after:translate-y-[-50%] after:right-[-9px] after:m-auto after:w-[1px] after:h-[38%] after:bg-white after:cursor-auto'>Terms of service</Link>
                                 </li>
                                 <li>
-                                    <a href="/copyright" data-drupal-link-system-path="node/376" className='mx-[8px] relative text-[12px] leading-[1.67] font-normal tracking-normal text-white no-underline outline-none cursor-pointer inline-block font-[Proxima-Nova] after:absolute after:top-[56%] after:transform after:translate-y-[-50%] after:right-[-9px] after:m-auto after:w-[1px] after:h-[38%] after:bg-white after:cursor-auto'>Copyright policy</a>
+                                    <Link href="/copyright" data-drupal-link-system-path="node/376" className='mx-[8px] relative text-[12px] leading-[1.67] font-normal tracking-normal text-white no-underline outline-none cursor-pointer inline-block font-[Proxima-Nova] after:absolute after:top-[56%] after:transform after:translate-y-[-50%] after:right-[-9px] after:m-auto after:w-[1px] after:h-[38%] after:bg-white after:cursor-auto'>Copyright policy</Link>
                                 </li>
                             </ul>
                         </div>
                         <div className="basis-6/12 flex justify-end flex-wrap">
                             <small className='text-[12px] leading-none align-top text-white font-[Proxima-Nova] inline-block pt-[5px] tracking-[0.001em]'><sub>© </sub>2025 Authentic8, Inc. All Rights Reserved.</small>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -55,14 +55,13 @@ const CardGrid = ({ title, subtitle, imgSrc, imgAlt, link, cards }) => {
   }, []);
 
   return (
-    <section className='w-full relative py-[45px] lg:py-[100px] overflow-hidden max-w-[1920px] bg-white mx-auto min-h-[632px] flex flex-col justify-center'>
+    <section className='CardGrid w-full relative py-[45px] lg:py-[100px] overflow-hidden max-w-[1920px] bg-white mx-auto min-h-[632px] flex flex-col justify-center'>
       <div className="container">
         <h2 className='text-[#151831] text-[24px] lg:text-[50px] font-semibold leading-tight mb-5'>{document?.title}</h2>
         <div className="flex relative outline-none w-calc-full-plus-30 flex-wrap lg:flex-nowrap">
           {document?.card?.map((card, index) => {
             return (
-              <div key={index}>
-                <div className="basis-full sm:basis-6/12 lg:basis-4/12 p-2">
+                <div key={index} className="basis-full sm:basis-6/12 lg:basis-4/12 p-2">
                   <div className='relative overflow-visible shadow-lg inline-block align-top h-full  border-2 border-[#bdc4cc]  lg:max-w-[409px] w-full min-h-[358px] bg-white rounded-[5px] border-t-0  transition-all duration-500 ease-in-out float-none clear-both p-[32px] pt-[32px] pr-[21px] pb-[40px] pl-[25px] outline-none  before:bg-gradient-to-r before:from-[#252d6a] before:via-[#595ad3] before:to-[#742abf] before:absolute before:top-0 before:left-[-2px] before:w-[101%] before:h-[7px] before:bg-[#5856d6] before:rounded-tl-[5px] before:rounded-tr-[5px]'>
                   {(index === 1)? <Image src={card.bgcardimg.url} alt="logo" width={100} height={52}  className='absolute w-full top-0 left-0'/>:""}
                     <div className="flex items-center mb-[16px]">
@@ -80,7 +79,6 @@ const CardGrid = ({ title, subtitle, imgSrc, imgAlt, link, cards }) => {
                     </div>
                   </div>
                 </div>
-              </div>
             )
           })}
 

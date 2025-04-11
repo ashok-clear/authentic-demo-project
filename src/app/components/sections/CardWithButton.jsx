@@ -21,7 +21,7 @@ const CardWithbutton = () => {
         fetchData()
     }, []);
     return (
-        <section className='w-full relative py-[45px] lg:py-[100px] overflow-hidden max-w-[1920px] bg-white mx-auto'>
+        <section className='CardWithButton w-full relative py-[45px] lg:py-[100px] overflow-hidden max-w-[1920px] bg-white mx-auto'>
             <div className="container">
                 <h2 className="text-[#151930] max-w-[850px] tracking-[-0.5px] text-[24px] lg:text-[50px] font-proxima-nova font-semibold leading-[1.1]">{document?.title}</h2>
                 <div className='flex flex-wrap justify-between mt-[10px] lg:mt-[30px] flex-col md:flex-row'>
