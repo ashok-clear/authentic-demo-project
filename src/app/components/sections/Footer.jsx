@@ -24,8 +24,8 @@ const Footer = () => {
     return (
         <footer className='Footer bg-[#151831] max-w-[1920px] mx-auto w-full relative'>
             <div className="container">
-                <div className='pt-8 pb-10 lg:pt-[80px] pr-0 lg:pb-12 pl-0 flex items-start flex-wrap'>
-                    <div className='basis-full lg:basis-2/12 flex justify-between md:justify-center flex-row md:flex-col w-1/2 float-left relative'>
+                <div className='pt-8 pb-10 lg:pt-[80px] pr-0 lg:pb-12 pl-0 flex text-center sm:text-start items-center sm:items-start flex-wrap flex-col sm:flex-row'>
+                    <div className='basis-full md:basis-2/12 pr-[46px] lg:pr-0 flex justify-between md:justify-center flex-col sm:flex-row md:flex-col float-left relative'>
                         <div className='mt-[30px]'>
                             <div className="w-[160px] h-[19px]">
                                 <Link href="" className='cursor-pointer no-underline outline-0 inline-block font-proxima'>
@@ -45,10 +45,10 @@ const Footer = () => {
                                     <span className='text-[14px] font-normal leading-[1.43] tracking-normal text-left text-white max-w-[156px] block'>Redwood City, CA 94065 </span>
                                 </p>
                                 <p>
-                                    <a className="text-[14px] font-normal tracking-normal text-left mt-[12px] text-white transition-colors duration-[300ms] ease-in-out no-underline outline-0 cursor-pointer inline-block font-proxima" href="tel:1-877-659-6535">+1-877-659-6535</a>
+                                    <Link className="text-[14px] font-normal tracking-normal text-left mt-[12px] text-white transition-colors duration-[300ms] ease-in-out no-underline outline-0 cursor-pointer inline-block font-proxima" href="tel:1-877-659-6535">+1-877-659-6535</Link>
                                 </p>
                                 <div className="mt-[15px]">
-                                    <a className="text-[14px] font-bold leading-[1.21] tracking-normal text-center text-white py-[5px] px-[30px] max-w-[165px] inline-block relative cursor-pointer transition-all duration-[300ms] ease-in-out bg-[#68be62] border-2 border-transparent rounded-[5px] overflow-hidden align-middle" href="/demo-request">BOOK A DEMO</a>
+                                    <Link className="text-[14px] font-bold leading-[1.21] tracking-normal text-center text-white py-[5px] px-[30px] max-w-[165px] inline-block relative cursor-pointer transition-all duration-[300ms] ease-in-out bg-[#68be62] border-2 border-transparent rounded-[5px] overflow-hidden align-middle" href="/demo-request">BOOK A DEMO</Link>
                                 </div>
                             </div>
 
@@ -71,7 +71,7 @@ const Footer = () => {
                     </div>
                     {document?.footer_links?.map((footer_links, index) => {
                         return (
-                            <div key={index} className="basis-full  lg:basis-2/12 flex flex-wrap justify-bteween">
+                            <div key={index} className="basis-full  sm:basis-3/12  lg:basis-2/12 flex flex-wrap justify-bteween">
                                 <div className="mr-5 mt-[30px]  lg:pl-[39px]">
                                     <ul>
                                         <li>
