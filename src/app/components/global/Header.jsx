@@ -4,8 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from "react";
 import { client } from '../../../..';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
+    const navegate = useRouter() 
 
     const [document, setDocument] = useState()
     useEffect(() => {
