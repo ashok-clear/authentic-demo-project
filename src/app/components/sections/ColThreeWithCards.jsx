@@ -23,7 +23,7 @@ const ColThreeWithCards = () => {
   }, []);
 
   return (
-    <section className='ColThreeWithCards w-full relative py-[45px] lg:py-[100px] overflow-hidden bg-[#f1f3f5] max-w-[1920px] bg-white mx-auto min-h-[632px] flex flex-col justify-center'>
+    <section className='ColThreeWithCards w-full relative py-[45px] lg:py-[100px] overflow-hidden bg-[#f1f3f5] max-w-[1920px]  mx-auto min-h-[632px] flex flex-col justify-center'>
       <div className="container">
         <div className="">
           <h2 className='text-[#151831] text-[24px] lg:text-[50px] font-semibold leading-tight mb-5 max-w-[880px]'>{document?.title}</h2>
