@@ -56,11 +56,14 @@ const Header = () => {
                             <li className='py-[32px] position-[inherit] list-none'>
                                 <Link className='text-[#151831] text-[15px] lg:text-[13px] xl:text-[15px] font-bold transition-colors duration-300 ease-in-out uppercase relative no-underline outline-none cursor-pointer inline-block font-sans' href="/">{document?.fifthlink.text}</Link>
                             </li>
+                                <li className='py-[32px] position-[inherit] list-none'>
+                                <Link className='text-[#151831] text-[15px] lg:text-[13px] xl:text-[15px] font-bold transition-colors duration-300 ease-in-out uppercase relative no-underline outline-none cursor-pointer inline-block font-sans' href="/">{document?.fifthlink.text}</Link>
+                            </li>
                         </ul>
 
                         <div className="hidden lg:flex">
                             <span></span>
-                            <a className='px-[13px] py-[10px] border-[1px] mr-[17px] text-[14px] border-[1px] border-[#68be62] bg-transparent mt-0 text-center inline-block relative outline-none text-[16px] font-bold cursor-pointer transition-all duration-300 ease-in-out bg-[#68be62] border-2  rounded-[5px] overflow-hidden align-middle text-white' href="">
+                            <a className='px-[13px] py-[10px] mr-[17px] text-[14px] border-[1px] border-[#68be62] bg-transparent mt-0 text-center inline-block relative outline-none text-[16px] font-bold cursor-pointer transition-all duration-300 ease-in-out bg-[#68be62] border-2  rounded-[5px] overflow-hidden align-middle text-white' href="">
                                 <span className='text-[#68be62] leading-[1.23] text-[14px] left-0 inline-block relative font-sans uppercase transition-all duration-300 ease-in-out'>{document?.button.text}</span>
                             </a>
                             <a className='px-[13px] py-[10px] mt-0 text-center inline-block relative outline-none text-[16px] font-bold cursor-pointer transition-all duration-300 ease-in-out bg-[#68be62] border-2 border-transparent rounded-[5px] overflow-hidden align-middle text-white' href="">
